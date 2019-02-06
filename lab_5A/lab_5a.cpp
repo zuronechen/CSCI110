@@ -1,3 +1,16 @@
+/*
+Description: 
+    A program that prompts the user to enter two arrays after specifying their array sizes. 
+    A function then checks whether the two arrays have the same length, order, and values. 
+Author: Zurone Chen
+Input Variables: first_array, first_size, second_array, second_size
+Process Flow: 
+    If the size of the two arrays are different: return false
+    If the size of the two arrays are the same: check for differing values in each position
+    If the first array has a different value than the second array in their respective positions: return false
+Output Variables: first_array, second_array
+*/
+
 // #include "stdafx.h"
 #include <iostream>
 #include <string>
