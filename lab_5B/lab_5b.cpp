@@ -1,9 +1,13 @@
 /* 
-Description: A program that takes a user input array, then searches 
+Description: 
+    A program that takes a user input array, searches for duplicates, then prints a new array with no duplicates.
 Author: Zurone Chen
-Input Variables: 
+Input Variables: int values[]
 Process Flow: 
-Output Variables: 
+    remove_duplicates function scans the array and sets a variable equal to the array at the ith position. 
+    While scanning with i, there is another scan starting at i+1 position (j). When a value at the jth position
+    is equal to a value at the ith position, the decrease_size position is called. 
+Output Variables: values[] (without duplicates)
 */
 
 // #include "stdafx.h"
@@ -32,13 +36,13 @@ void decrease_size(int values[], int position, int &size)
 // detects when there is a duplicate as i and j scan the array
 void remove_duplicates(int values[], int &size) 
 {
-    int array;
+    int placeholder;
     for(int i = 0; i < size; i++)
     {
-        array = values[i];
+        placeholder = values[i];
         for(int j = i + 1; j < size; j++)
         {
-            if(array == values[j])
+            if(placeholder == values[j])
             {
                 decrease_size(values, j, size);
                 j--;
