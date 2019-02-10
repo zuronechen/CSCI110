@@ -12,19 +12,19 @@ using namespace std;
 
 void reverse(double* a, int size)
 {
-    double *right;
-    double *left;
-    double temp;
-    right = a; 
-    left = a + (size - 1);
+    double *first; // first position of array
+    double *last; // second position of array
+    double temp; // for swapping variables
+    last = a; // scan to the right
+    first = a + (size - 1); // scan to the left
 
     while (left >= right)
     {
-        temp = *right;
-        *right = *left;
-        *left = temp;
-        right++;
-        left--;
+        temp = *last; // swap position
+        *last = *first; 
+        *first = temp; 
+        last++; // continue scan
+        first--;
 
     }
 }
