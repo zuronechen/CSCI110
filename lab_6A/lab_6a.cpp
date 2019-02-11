@@ -20,20 +20,19 @@ using namespace std;
 
 void reverse(double* a, int size)
 {
-    double *first; // first position of array
-    double *last; // last position of array
+    double *begin_pointer; // left scanner
+    double *end_pointer;  // right scanner
     double temp; // for swapping variables
-    last = a; // scan to the right
-    first = a + (size - 1); // scan to the left
+    end_pointer = a; // scan to the right 
+    begin_pointer = a + (size - 1); // scan to the left  
 
-    while (first >= last)
+    while (begin_pointer >= end_pointer)     
     {
-        temp = *last; // swap position
-        *last = *first; 
-        *first = temp; 
-        last++; // continue scan
-        first--;
-
+        temp = *end_pointer; // swap position 
+        *end_pointer = *begin_pointer;  
+        *begin_pointer = temp;  
+        end_pointer++; // continue scan  
+        begin_pointer--;
     }
 }
 
