@@ -23,16 +23,16 @@ void reverse(double* a, int size)
     double *begin_pointer; // left scanner
     double *end_pointer;  // right scanner
     double temp; // for swapping variables
-    end_pointer = a; // scan to the right 
-    begin_pointer = a + (size - 1); // scan to the left  
+    begin_pointer = a; // scan to the right 
+    end_pointer = a + (size - 1); // scan to the left  
 
-    while (begin_pointer >= end_pointer)     
+    while (end_pointer >= begin_pointer)     
     {
-        temp = *end_pointer; // swap position 
-        *end_pointer = *begin_pointer;  
-        *begin_pointer = temp;  
-        end_pointer++; // continue scan  
-        begin_pointer--;
+        temp = *begin_pointer; // swap position 
+        *begin_pointer = *end_pointer;  
+        *end_pointer = temp;  
+        begin_pointer++; // continue scan  
+        end_pointer--;
     }
 }
 
