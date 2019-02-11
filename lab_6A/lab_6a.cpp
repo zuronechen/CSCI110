@@ -1,3 +1,11 @@
+/* 
+Description: A program that reads a user input array and reverses the order of the values using pointers.
+Author: Zurone Chen
+Input Variables: double a[] (original array)
+Process Flow: while reading the values of an array, the last position of the array gets swapped with the first position of the array.
+Output Variables: reversed array
+*/
+
 // #include "stdafx.h"
 #include <iostream>
 #include <string>
@@ -13,12 +21,12 @@ using namespace std;
 void reverse(double* a, int size)
 {
     double *first; // first position of array
-    double *last; // second position of array
+    double *last; // last position of array
     double temp; // for swapping variables
     last = a; // scan to the right
     first = a + (size - 1); // scan to the left
 
-    while (left >= right)
+    while (first >= last)
     {
         temp = *last; // swap position
         *last = *first; 
